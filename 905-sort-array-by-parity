@@ -10,3 +10,16 @@ def sort_array_by_parity(a)
     end
     return even + odd
 end
+================================================
+var sortArrayByParity = function(A) {
+    let odd = []
+    let even = []
+    A.forEach (function(e) {
+        if (e % 2 === 0) {
+        even.push(e)
+    }  else {
+        odd.push(e)
+    }
+               })
+   return even.concat(odd)
+};
