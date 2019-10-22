@@ -1,0 +1,14 @@
+var isPalindrome = function(s) {
+
+   let regex = /[a-z0-9]/g
+   let matching = s.toLowerCase().match(regex)
+   if (matching <= 1){
+       return true
+   }
+   let join1 = matching.join('')
+   let matchingNew = matching
+   let reversed = matchingNew.reverse()
+   let join2 = reversed.join('')
+   return join1 === join2
+
+};
