@@ -5,6 +5,7 @@
 // }
 
 // //SOLUTION2 - not the best, but good alternative
+// every returns true or false 
 // function palindrome(str){
 //   let array = str.split('')
 //   return array.every((letter, index) => {
