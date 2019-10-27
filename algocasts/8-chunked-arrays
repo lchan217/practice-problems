@@ -14,6 +14,7 @@
 //
 //   for (let element of array){
 //     const last = chunked[chunked.length-1]
+// //         last array in chunked 
 //
 //     if (!last || last.length === size){
 //       chunked.push([element])
