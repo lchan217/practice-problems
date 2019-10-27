@@ -1,0 +1,14 @@
+RECURSION
+** always define the base case (when to exit) first
+
+
+function printNumber(n){
+  //base case
+  if (n === 0) {
+    return;
+  }
+  console.log(n)
+  printNumber(n - 1) // how to move towards base case
+}
+
+printNumber(10)
