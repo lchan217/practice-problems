@@ -1,0 +1,38 @@
+runtime complexity: describes performance of algo
+  -how much power/time is required to run your algo if we double inputs?
+
+string reverse
+  1 loop -> (n) so linear runtime because of a 1:1 relationship
+
+steps
+  2 nested for loops -> n =2 ... do 4 things
+                        n = 3 ... do 9 things
+          increases each time -> (n^2) so quadratic runtime
+
+TYPES
+1. constant time - 1 : always takes the same amount of time no matter the input
+2. logarithmic time - log(n) : if you double amount of elements, iterating doesn't increase amount of work
+  - searching operations
+3. linear time - n : iterating through all elements
+  - loop spanning from '0 to array.length'
+4. quasilinear time - n * log(n) : if you double amount of elements, iterating doesn't increase amount of work
+  - sorting operations
+5. quadratic time - n^2 : every other element has to be compared to every other elements
+  - handshake problem
+6. exponential time - 2 ^ n : adding a single element to a collection, processing power doubles
+  - not good... don't propose as a real solution in an interview
+
+TIPS 
+Big 'O' Notation (another name for runtime complexity)
+Linear - O(n)
+Constant - O(1)
+Quadratic - O(n^2)
+
+Examples
+probably O(n) -> iterating with a simple for loop through single collection
+  -> iterating through half a collection
+O(n+m) -> iterating through 2 different collections with separate for loops
+O(n^2) -> two nested for loops iterating over the same collection
+O(n*m) -> two nested loops iterating over different collections
+O(n*log(n)) -> sorting
+O(log(n)) - searching a sorted array
