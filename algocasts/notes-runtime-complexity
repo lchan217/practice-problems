@@ -1,6 +1,8 @@
 runtime complexity: describes performance of algo
   -how much power/time is required to run your algo if we double inputs?
 
+space complexity - how much more memory is required by doubling the problem set? 
+
 string reverse
   1 loop -> (n) so linear runtime because of a 1:1 relationship
 
@@ -22,7 +24,7 @@ TYPES
 6. exponential time - 2 ^ n : adding a single element to a collection, processing power doubles
   - not good... don't propose as a real solution in an interview
 
-TIPS 
+TIPS
 Big 'O' Notation (another name for runtime complexity)
 Linear - O(n)
 Constant - O(1)
