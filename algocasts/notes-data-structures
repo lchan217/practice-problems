@@ -1,0 +1,6 @@
+DATA STRUCTURES
+definition: ways of organizing info with optimal runtime complexity for adding/removing records
+
+1. QUEUE - FIFO
+enqueuing - adding a record; array.unshift()
+dequeuing - removing a record; array.pop()
