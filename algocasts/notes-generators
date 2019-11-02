@@ -1,0 +1,26 @@
+GENERATORS (extra content)
+
+LAST FUNCTION OF LINKEDLISTS
+*[Symbol.iterator]() {
+let node = this.head;
+while (node) {
+  yield node;
+  node = node.next;
+}
+
+EXAMPLE IN VIDEO
+function *numbers(){
+  const result = 1+1
+  return 20 + (yield result)
+}
+
+const generator = numbers()
+generator //=> {}
+
+generator.next //=> {"value":2, "done":false}
+call .next on it - call the function until it hits yield then it's paused and returns what is yielded
+
+generator.next //=> {"value":null, "done":true}
+resume after yield
+
+generator.next(10) - 10 becomes (yield result) and it would return {"value":30, "done":true}

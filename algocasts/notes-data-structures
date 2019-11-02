@@ -2,5 +2,15 @@ DATA STRUCTURES
 definition: ways of organizing info with optimal runtime complexity for adding/removing records
 
 1. QUEUE - FIFO
-enqueuing - adding a record; array.unshift()
-dequeuing - removing a record; array.pop()
+- enqueuing - adding a record; array.unshift()
+- dequeuing - removing a record; array.pop()
+
+2. STACKS - FILO
+- adding a record - .push
+- removing - .pop
+
+3.LINKED LISTS
+- chain of 4 nodes with data and next
+- order is always maintained
+- head - first node
+- tail - last node; won’t have a ‘next’ attribute
