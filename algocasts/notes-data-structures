@@ -14,3 +14,13 @@ definition: ways of organizing info with optimal runtime complexity for adding/r
 - order is always maintained
 - head - first node
 - tail - last node; won’t have a ‘next’ attribute
+- node2.next = node1
+
+4. TREES
+- each component is a node
+- nodes are parents and children
+- children can have siblings
+- traversing - iterating through a tree
+  - breadth-first - start at top and go left to right
+  - depth-first - start at top and left side... go through parent's and associated kids, then next parent
+    - think org chart 
