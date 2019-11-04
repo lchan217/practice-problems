@@ -1,0 +1,16 @@
+How would you design _________?
+- there's no right answer
+- focus is usually on data model, but ask if they want you to focus on anything specific
+- don't mention specific technologies
+- draw!! focus on how you would organize a few features
+- talk!!
+
+Generic Process:
+ID two core features
+  tweeting - what would db look like? how do #topic and @mentions work?
+  feed - which tweets to show to a user
+possible implementation
+ID and address difficulties
+solution for scaling (caching or deployment options)
+  caching - calc top ten tweets (expensive work), put in memory store so you don't need to recalculate it
+  load balancer - has multiple servers

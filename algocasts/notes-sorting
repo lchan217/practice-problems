@@ -1,0 +1,4 @@
+SORTING
+1. bubble sort - n^2 - easy
+2. selection sort - n^2 - easy
+3. merge sort - n*log(n) - medium 
