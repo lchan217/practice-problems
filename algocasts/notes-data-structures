@@ -23,4 +23,8 @@ definition: ways of organizing info with optimal runtime complexity for adding/r
 - traversing - iterating through a tree
   - breadth-first - start at top and go left to right
   - depth-first - start at top and left side... go through parent's and associated kids, then next parent
-    - think org chart 
+    - think org chart
+- binary search tree - 2 children only called left and right
+  - left is lower than parent, right is higher than parent
+  value > left.value            value < right.value
+- binary tree - parent with 2 children, value doesn’t matter
