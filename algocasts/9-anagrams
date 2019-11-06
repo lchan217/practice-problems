@@ -21,35 +21,25 @@
 
 // SOLUTION 1
 function anagrams(stringA, stringB){
-    let arrayA = stringA.replace(/[^\w]/g, "").toLowerCase().split('')
-    let arrayB = stringB.replace(/[^\w]/g, "").toLowerCase().split('')
+  let arrayA = stringA.replace(/[^\w]/g, "").toLowerCase().split('')
+  let arrayB = stringB.replace(/[^\w]/g, "").toLowerCase().split('')
 
-    let objA = {}
-    let objB = {}
+  let objA = {}
+  let objB = {}
 
-    for (let element of arrayA){
-      if (objA[element]){
-        objA[element]++
-      } else
-      objA[element] = 1
+  for(let char of arrayA){
+    objA[char] ? objA[char]++ : objA[char] = 1
+  }
+
+  for(let char of arrayB){
+    objB[char] ? objB[char]++ : objB[char] = 1
+  }
+
+  if(Object.keys(objA).length !== Object.keys(objB).length) return false
+
+  for(chunk in objA){
+    if(objA[chunk] !== objB[chunk]) return false
     }
-
-    for (let element of arrayB){
-      if (objB[element]){
-        objB[element]++
-      } else
-      objB[element] = 1
-    }
-
-    if (Object.keys(objA).length !== Object.keys(objB).length) {
-      return false
-    }
-
-    for (let chunk in objA){
-      if (objA[chunk] !== objB[chunk]){
-        return false
-      }
-    }
-    return true
+  return true
 }
 module.exports = anagrams;
