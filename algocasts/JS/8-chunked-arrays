@@ -30,7 +30,7 @@ function chunk(array, size){
   let i = 0
   while (i < array.length) {
     let section = array.slice(i, i + size)
-    chunked.push(array.slice(section))
+    chunked.push(section)
     i = i + size
   }
   return chunked

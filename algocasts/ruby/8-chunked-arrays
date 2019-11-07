@@ -1,0 +1,12 @@
+def chunk(array, size)
+  result = []
+  array.each do |n|
+    last = result.last
+    if !last || last.length == size
+      result.push([n])
+    else
+      last.push(n)
+    end
+  end
+  return result
+end 

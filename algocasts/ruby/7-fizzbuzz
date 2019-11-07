@@ -1,0 +1,14 @@
+def fizz_buzz(n)
+    array = (1..n)
+        array.map do |num|
+        if num%15 == 0
+            num = "FizzBuzz"
+        elsif num%5 == 0
+            num = "Buzz"
+        elsif num%3 == 0
+            num = "Fizz"
+        else
+            num = num.to_s
+        end
+    end
+end
