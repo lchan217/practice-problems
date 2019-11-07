@@ -1,0 +1,32 @@
+def anagrams(stringA, stringB)
+  removedA = stringA.downcase.gsub(/[^\w]/,"").split('').sort.join('')
+  removedB = stringB.downcase.gsub(/[^\w]/,"").split('').sort.join('')
+
+  removedA == removedB ? true : false
+end
+
+FYI Hash.new(0) sets default value for any key to 0, while {} sets nil
+
+def anagrams(stringA, stringB)
+  removedA = stringA.downcase.gsub(/[^\w]/,"").split('')
+  removedB = stringB.downcase.gsub(/[^\w]/,"").split('')
+
+  objA = Hash.new(0)
+  objB = Hash.new(0)
+
+  removedA.each do |char|
+    objA[char] += 1
+  end
+
+   removedB.each do |char|
+    objB[char] += 1
+  end
+
+  return false if objA.length != objB.length
+
+  objA.each do |key, value|
+    return false if objA[key] != objB[key]
+  end
+
+  return true
+end
