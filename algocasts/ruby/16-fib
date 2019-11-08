@@ -1,0 +1,13 @@
+https://leetcode.com/problems/fibonacci-number/submissions/
+
+def fib(n)
+    array = [0,1]
+    i = 2
+    while i <= n do
+        a = array.last
+        b = array[-2]
+        array.push(a+b)
+        i += 1
+    end
+    return array[n]
+end
