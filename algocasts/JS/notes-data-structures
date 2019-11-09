@@ -14,7 +14,6 @@ definition: ways of organizing info with optimal runtime complexity for adding/r
 - order is always maintained
 - head - first node
 - tail - last node; won’t have a ‘next’ attribute
-- node2.next = node1
 
 4. TREES
 - each component is a node
