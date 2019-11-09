@@ -1,0 +1,41 @@
+https://leetcode.com/problems/first-unique-character-in-a-string/
+
+JS:
+var firstUniqChar = function(s) {
+    let array = s.split('')
+    let obj = {}
+
+    for (let element of array){
+        obj[element] ? obj[element]++ : obj[element] = 1
+    }
+
+    let answer = ''
+    for(let key in obj){
+        if(obj[key] === 1){
+            answer = key
+            break
+        }
+    }
+    if (answer === '') return -1
+    return array.indexOf(answer)
+};
+
+Ruby:
+def first_uniq_char(s)
+    obj = Hash.new(0)
+    array = s.split('')
+
+    array.each do |char|
+        obj[char] +=1
+    end
+
+    answer = ''
+    obj.find do |key, value|
+        if value == 1
+          answer = key
+          break
+        end
+    end
+    return -1 if answer == ''
+    s.index(answer)
+end
