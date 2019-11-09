@@ -1,0 +1,61 @@
+https://leetcode.com/problems/lemonade-change/
+queue problem
+
+JS:
+var lemonadeChange = function(bills) {
+    let pot = {5: 0, 10: 0, 20: 0}
+
+    for(let bill of bills){
+        if (bill === 5){
+            pot[5]++
+        } else if (bill === 10){
+            pot[10]++
+            if (pot[5] > 0){
+                pot[5]--
+            } else {
+             return false
+            }
+        } else {
+            pot[20]++
+            if(pot[10] > 0 && pot[5] > 0){
+                pot[10]--
+                pot[5]--
+            } else if (pot[5] > 3){
+                pot[5] -= 3
+            } else {
+                return false
+            }
+        }
+    }
+    return true
+};
+
+Ruby:
+def lemonade_change(bills)
+    pot = {5 => 0, 10 => 0, 20 =>0}
+
+    bills.each do |bill|
+        if bill == 5
+            pot[5] += 1
+        elsif bill == 10
+            pot[10] += 1
+            if pot[5] > 0
+                pot[5] -= 1
+
+            else
+                return false
+            end
+        else
+            pot[20] += 1
+            if pot[5] > 0 && pot[10] > 0
+                pot[5] -= 1
+                pot[10] -= 1
+            elsif pot[5] > 3
+                pot[5] -= 3
+            else
+                return false
+            end
+        end
+    end
+    return true
+end
