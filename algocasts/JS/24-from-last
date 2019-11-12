@@ -12,19 +12,19 @@
 //    fromLast(list, 2).data // 'b'
 
 function fromLast(list, n) {
-  let slow = list.head
-  let fast = list.head
+  let behind = list.head
+  let ahead = list.head
 
   while(n > 0){
-    fast = fast.next
+    ahead = ahead.next
     n--
   }
 
-  while(fast.next){
-    slow = slow.next
-    fast = fast.next
+  while(ahead.next){
+    behind = behind.next
+    ahead = ahead.next
   }
-  return slow
+  return behind
 }
 
 module.exports = fromLast;
