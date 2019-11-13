@@ -1,0 +1,48 @@
+https://www.codewars.com/kata/split-strings/train/ruby
+note: there are no tests for this solution
+def solution(str)
+  answer = []
+  array = str.split('')
+  length = 1
+  chunk = ''
+
+  array.each do |letter|
+      if length == 1
+        length += 1
+        chunk = letter
+      elsif length == 2
+        length += 1
+        chunk = chunk + letter
+        answer.push(chunk)
+        length = 1
+        chunk = ''
+      end
+
+      if str.length.odd? && letter == str.slice(-1)
+        answer.push(str.slice(-1)+ '_')
+      end
+  end
+
+  answer
+end
+
+solution('abcdef') => ["ab", "cd", "ef"]
+solution('abcde') => ["ab", "cd", "e_"]
+
+Misread instructions... In below solution, it splits string into two even halves, filling in any extra spaces with '_'
+def solution(str)
+  length = (str.length/2.to_f).ceil
+  answer = []
+  answer.push(str.slice(0,length))
+
+  if (length-1).even?
+    answer.push(str.slice(length..-1))
+  else
+    remaining = (str.slice(length..-1)) + '_'
+    answer.push(remaining)
+  end
+  answer
+end
+
+solution('abcdef') => ["abc", "def"]
+solution('abcde') => ["abc", "de_"]

@@ -1,0 +1,30 @@
+https://leetcode.com/problems/majority-element/
+
+JS:
+
+Ruby:
+def majority_element(nums)
+    obj = Hash.new(0)
+    nums.each do |n|
+        obj[n] += 1
+    end
+end
+
+
+
+def majority_element(nums)
+
+    obj = Hash.new(0)
+    nums.each do |n|
+        obj[n] += 1
+    end
+
+    maxNum = ''.to_i
+
+    obj.each do |key,value|
+        if value > nums.length/2
+            maxNum = key
+        end
+    end
+    maxNum
+end
