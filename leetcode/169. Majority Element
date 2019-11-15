@@ -8,23 +8,22 @@ def majority_element(nums)
     nums.each do |n|
         obj[n] += 1
     end
+
+    answer = Integer
 end
 
 
 
 def majority_element(nums)
-
     obj = Hash.new(0)
     nums.each do |n|
         obj[n] += 1
     end
-
-    maxNum = ''.to_i
-
+    answer = Integer
     obj.each do |key,value|
         if value > nums.length/2
-            maxNum = key
+            answer = key
         end
     end
-    maxNum
+    answer
 end
