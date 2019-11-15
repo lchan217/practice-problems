@@ -1,0 +1,34 @@
+https://leetcode.com/problems/intersection-of-two-arrays-ii/
+JS:
+var intersect = function(nums1, nums2) {
+    let answer = []
+    let obj = {}
+    for (let num of nums1){
+        obj[num] ? obj[num]++ : obj[num] = 1
+    }
+
+    for(let num of nums2){
+        if (obj[num]){
+            obj[num]--
+            answer.push(num)
+        }
+    }
+    return answer
+};
+
+RUBY:
+def intersect(nums1, nums2)
+    hash = Hash.new(0)
+    nums1.each do |n|
+        hash[n] ? hash[n] += 1 : hash[n] = 1
+    end
+
+    answer = []
+    nums2.each do |n|
+        if hash[n] >=1
+            answer.push(n)
+            hash[n] -= 1
+        end
+    end
+    answer
+end
