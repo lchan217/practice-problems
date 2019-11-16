@@ -1,0 +1,14 @@
+https://leetcode.com/problems/defanging-an-ip-address/
+JS:
+var defangIPaddr = function(address) {
+   return address.replace(/[.]/g, "[.]")
+};
+
+Ruby:
+def defang_i_paddr(address)
+    address.gsub(/[.]/, '[.]')
+end
+
+
+
+** notice you need the g (global) for javascript in regex, but not ruby
