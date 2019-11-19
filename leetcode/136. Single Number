@@ -1,0 +1,25 @@
+https://leetcode.com/problems/single-number/
+var singleNumber = function(nums) {
+    let obj = {}
+    for (let num of nums){
+        obj[num] ? obj[num]++ : obj[num] = 1
+    }
+
+    for (let num in obj){
+        if (obj[num] === 1) return num
+    }
+};
+
+def single_number(nums)
+    hash = Hash.new(0)
+
+    nums.each do |n|
+        hash[n] ? hash[n] += 1 : hash[n] = 1
+    end
+
+    hash.each do |k,v|
+        if hash[k] < 2
+            return k
+        end
+    end
+end
