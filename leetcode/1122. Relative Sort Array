@@ -1,0 +1,22 @@
+https://leetcode.com/problems/relative-sort-array/
+var relativeSortArray = function(arr1, arr2) {
+    let answer = []
+    for (let num2 of arr2){
+        for (let num1 of arr1){
+            if (num1===num2){
+                answer.push(num1)
+            }
+        }
+    }
+
+let second = []
+  for (let n of arr1){
+    if (arr2.includes(n) === false){
+      second.push(n)
+    }
+  }
+
+  second.sort((a,b) => a-b)
+
+    return answer.concat(second)
+};
