@@ -37,3 +37,13 @@ function capitalize(str){
 
 
 module.exports = capitalize;
+========================================================================================================
+https://leetcode.com/problems/to-lower-case/submissions/
+
+var toLowerCase = function(str) {
+    let result = ''
+    for (let char of str){
+        result += char.toLowerCase()
+    }
+    return result
+};
