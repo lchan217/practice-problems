@@ -1,0 +1,20 @@
+https://leetcode.com/problems/find-the-duplicate-number/
+def find_duplicate(nums)
+    hash = Hash.new(0)
+    nums.each do |n|
+        hash[n] ? hash[n] += 1 : hash[n] = 1
+    end
+
+    result = hash.find {|k, v| v > 1 }
+    result[0]
+end
+
+follows space complexity constraint:
+var findDuplicate = function(nums) {
+       nums = nums.sort()
+        for(let i = 0; i< nums.length; i++){
+        if(nums[i] === nums[i+1]){
+            return nums[i]
+        }
+    }
+};
