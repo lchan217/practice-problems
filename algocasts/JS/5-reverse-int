@@ -21,3 +21,16 @@
 // }
 
 module.exports = reverseInt;
+
+
+VERSION 2 - from leetcode
+https://leetcode.com/problems/reverse-integer/submissions/
+var reverse = function(x) {
+    let reversed = Math.sign(x)*parseInt(x.toString().split('').reverse().join(''))
+    max = 2147483648
+    if(reversed > max || reversed < -max) {
+      return 0
+    } else {
+      return reversed
+    }
+}

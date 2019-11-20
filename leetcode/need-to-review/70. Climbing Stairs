@@ -1,0 +1,24 @@
+https://leetcode.com/problems/climbing-stairs/
+
+
+var climbStairs = function(n) {
+    let array=[1,2,3];
+    for(let i = 3;i<n;i++){
+       let a = array[array.length-1]
+       let b = array[array.length-2]
+       array.push(a+b)
+    }
+    return array[n-1];
+};
+
+def climb_stairs(n)
+    array = [1,2,3]
+    i = 3
+    while i < n do
+        a = array[array.length-1]
+        b = array[array.length-2]
+        array.push(a+b)
+        i += 1
+    end
+    return array[n-1]
+end
