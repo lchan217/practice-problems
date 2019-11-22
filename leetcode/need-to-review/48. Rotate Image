@@ -1,0 +1,13 @@
+https://leetcode.com/problems/rotate-image/
+
+var rotate = function(matrix) {
+    const size = matrix.length
+    for (let j = 0; j < size - 1 ; j++){
+        for (let i = j + 1; i < size; i++){
+            const tmp = matrix[j][i]
+            matrix[j][i] = matrix[i][j]
+            matrix[i][j] = tmp
+        }
+    }
+   return matrix
+};
