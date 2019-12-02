@@ -1,0 +1,42 @@
+https://leetcode.com/problems/implement-queue-using-stacks/submissions/
+/**
+ * Initialize your data structure here.
+ */
+var MyQueue = function() {
+    this.array = []
+};
+
+/**
+ * Push element x to the back of queue. 
+ * @param {number} x
+ * @return {void}
+ */
+MyQueue.prototype.push = function(x) {
+    this.array.push(x)
+};
+
+/**
+ * Removes the element from in front of queue and returns that element.
+ * @return {number}
+ */
+MyQueue.prototype.pop = function() {
+    return this.array.shift()
+};
+
+/**
+ * Get the front element.
+ * @return {number}
+ */
+MyQueue.prototype.peek = function() {
+    return this.array[0]
+};
+
+/**
+ * Returns whether the queue is empty.
+ * @return {boolean}
+ */
+MyQueue.prototype.empty = function() {
+    return this.array.length === 0
+};
+
+https://leetcode.com/problems/implement-stack-using-queues/submissions/
