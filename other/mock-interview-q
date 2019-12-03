@@ -1,0 +1,17 @@
+function findWord(array, word){
+  let splitResult = word.split('')
+  for(let element of array){
+    let splitWord = element.split('')
+    for(let i=0; i < splitWord.length; i++){
+      if(splitWord[i] === splitResult[i] && splitResult[i] !== '.'){
+        return splitWord.join('')
+      }
+    }
+  }
+  return 'no match'
+}
+
+let array = ['hello', 'goodbye', 'elloh', 'howdy']
+let word = '....h'
+
+findWord(array,word) // want: elloh 
