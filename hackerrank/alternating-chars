@@ -1,0 +1,15 @@
+https://www.hackerrank.com/challenges/alternating-characters/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=strings&isFullScreen=true
+
+function alternatingCharacters(s) {
+    let array =s.split('')
+    let deletions = 0
+    for(let i=0; i< array.length; i++){
+        if (array[i] === "A" && array[i+1] !== "B"){
+            deletions++
+        } else if (array[i] === "B" && array[i+1] !== "A"){
+          deletions++
+        }
+    }
+    deletions -=1 
+    return deletions
+}
