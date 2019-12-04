@@ -1,1 +1,32 @@
 https://www.hackerrank.com/challenges/ctci-making-anagrams/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=strings&isFullScreen=true
+
+function makeAnagram(a, b) {
+    let objA = {}
+    let objB = {}
+
+    for(let char of (a.split(''))){
+        objA[char] ? objA[char] += 1 : objA[char] = 1 
+    }
+
+      for(let char of (b.split(''))){
+        objB[char] ? objB[char] += 1 : objB[char] = 1 
+    }
+    
+    let deletions = 0
+
+    for(let num in objA){
+      //if keys are in both
+      if(objA[num] && objB[num]){
+        deletions += Math.abs(objA[num] - objB[num])
+      } else {
+        deletions += objA[num]
+      }
+    }
+    for(let num in objB){
+      if(objB[num] && !objA[num]){
+        deletions += objB[num]
+      }
+    }
+
+    return deletions
+}
