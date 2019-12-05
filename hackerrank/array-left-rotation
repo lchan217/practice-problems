@@ -6,3 +6,12 @@ function rotLeft(a, d) {
     }
     return a
 }
+
+def rotLeft(a, d)
+    while d > 0 do 
+        element = a.shift()
+        a.push(element)
+        d -=1
+    end
+    a
+end
