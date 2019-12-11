@@ -1,0 +1,12 @@
+function findDigit(n){
+  let digits = []
+  if (n < 0 ){ n = n*-1}
+  
+  while(n > 0){
+    digits.push(n%10)
+    n = parseInt(n/10)
+  }
+  return digits.reverse()
+}
+
+findDigit(123) = [1,2,3]
