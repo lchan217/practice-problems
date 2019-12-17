@@ -1,0 +1,21 @@
+https://leetcode.com/problems/remove-outermost-parentheses/
+
+var removeOuterParentheses = function(S) {
+    let result = ""
+    let lefts = 0
+    let rights = 0
+    let index = 0
+    
+    for(let i = 0; i < S.length; i++){
+        if (S[i] == "("){
+            lefts++
+        } else if (S[i] == ")"){
+            rights++
+        }
+        if (lefts == rights){
+            result += S.slice(index + 1, i)
+            index = i + 1
+        }
+    }
+    return result
+};
