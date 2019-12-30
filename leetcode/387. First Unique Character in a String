@@ -19,6 +19,23 @@ var firstUniqChar = function(s) {
     if (answer === '') return -1
     return array.indexOf(answer)
 };
+====================================================================================================
+var firstUniqChar = function(s) {
+    let obj = {}
+    let array = s.split('')
+    
+    for(let char of array){
+        obj[char] ? obj[char]++ : obj[char] = 1
+    }
+    
+    for(let char in obj){
+        if (obj[char] === 1){
+            return array.indexOf(char)
+        }
+    }
+    
+    return -1    
+};
 
 Ruby:
 def first_uniq_char(s)
