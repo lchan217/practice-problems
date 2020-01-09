@@ -1,0 +1,34 @@
+https://leetcode.com/problems/intersection-of-two-arrays/
+
+def intersection(nums1, nums2)
+    nums1 & nums2
+end
+
+def intersection(nums1, nums2)
+    longer = Array.new
+    shorter = Array.new
+    if nums1.length > nums2.length
+        shorter = nums2
+        longer = nums1
+    else 
+        shorter = nums1
+        longer = nums2
+    end
+    
+    shorter
+    
+    hash = Hash.new(0)    
+    longer.each do |n| 
+        hash[n] ? hash[n] += 1 : hash[n] = 1
+    end 
+    
+    answer = []
+    
+    shorter.each do |n|
+        if hash[n] >=1 
+            answer.push(n)
+            hash[n] -= 1 
+        end 
+    end
+    answer.uniq
+end
