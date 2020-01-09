@@ -19,7 +19,7 @@ def intersection(nums1, nums2)
     
     hash = Hash.new(0)    
     longer.each do |n| 
-        hash[n] ? hash[n] += 1 : hash[n] = 1
+        hash[n] += 1
     end 
     
     answer = []
