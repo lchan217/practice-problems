@@ -1,0 +1,15 @@
+https://leetcode.com/problems/top-k-frequent-words/
+
+var topKFrequent = function(words, k) {    
+    const hash = {}
+    
+    for(let word of words){
+        hash[word] = hash[word] + 1 || 1
+    }
+
+    //sort alphabetically by key
+    const alphabetized =  Object.keys(hash).sort().reduce((r, k) => (r[k] = hash[k], r), {});
+
+    //sort by count
+    return Object.keys(alphabetized).sort((a,b) => alphabetized[b] - alphabetized[a]).slice(0,k)
+};
